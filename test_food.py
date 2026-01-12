@@ -1,5 +1,5 @@
+import pytest
 from food import FoodOrder
-
 def test_total_amount():
     order = FoodOrder(1, "Sanjeev", "Pizza", 2, 300)
     assert order.total_amount() == 600
