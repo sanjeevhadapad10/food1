@@ -14,7 +14,6 @@ class FoodOrder:
             return "Invalid Order"
 
         total = self.total_amount()
-
         if total >= 500:
             return "Premium Order"
         elif 350 <= total < 500:
@@ -25,3 +24,11 @@ class FoodOrder:
             return "Regular Order"
         else:
             return "Basic Order"
+if __name__ == "__main__":
+    print("=== Food Order Application ===")
+    order = FoodOrder(101, "Sanjeev", "Pizza", 2, 300)
+    print("Customer:", order.customer_name)
+    print("Item:", order.food_item)
+    print("Quantity:", order.quantity)
+    print("Total Amount:", order.total_amount())
+    print("Order Status:", order.order_status())
